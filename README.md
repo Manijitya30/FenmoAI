@@ -4,19 +4,27 @@ A full-stack, production-ready REST API and frontend UI for tracking personal ex
 
 ---
 
+## Live Demo
+- **Frontend (Vercel):** *[Insert your Vercel URL here]*
+- **Backend (Railway):** *[Insert your Railway URL here]*
+
+---
+
 ## Quick Start
 
 ### 1. Start Backend API
+Open a terminal and run:
 ```bash
+cd backend
 npm install
-node server.js
+npm start
 ```
 *Server starts at **http://localhost:3000***
 
 ### 2. Start Frontend UI
-Open a new terminal:
+Open a new terminal and run:
 ```bash
-cd Frontend
+cd frontend
 npm install
 npm run dev
 ```
@@ -28,18 +36,16 @@ npm run dev
 
 ```text
 Fenmo/
-├── server.js                   # Express app setup
-├── db.js                       # SQLite connection + schema
-├── routes/
-│   └── expenses.js             # Route definitions
-├── controllers/
-│   └── expensesController.js   # Business logic
-├── tests/
-│   └── expenses.test.js        # Automated tests
-├── expenses.db                 # SQLite DB (auto-generated)
-└── Frontend/                   # React + Vite frontend
+├── Dockerfile                  # Production build config
+├── backend/                    # Node.js + Express API
+│   ├── server.js               # Express app setup
+│   ├── db.js                   # SQLite connection + schema
+│   ├── routes/                 # Route definitions
+│   ├── controllers/            # Business logic
+│   └── tests/                  # Automated API tests
+└── frontend/                   # React + Vite frontend
     ├── src/
-    │   ├── api.ts              # API client (handles idempotency)
+    │   ├── api.ts              # API client
     │   ├── App.tsx             # Main UI layout
     │   └── components/         # React components
     └── package.json
